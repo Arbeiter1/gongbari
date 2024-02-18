@@ -1,0 +1,26 @@
+name Bonjour
+
+on:
+  push:
+    branches:
+      -main
+  pull request:
+    branches:
+      -main
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on:ubuntu-latest
+    steps:
+      -uses:actions/checkout@v2
+      -name:hello monde
+        run:echo "Bonjour"
+        shell:bash
+  aurevoir:
+    runs-on:ubuntu-latest
+    steps:
+      -name: aurevoir
+        run:echo "Au revoir"
+        shell:bash
+    
