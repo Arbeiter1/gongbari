@@ -3,24 +3,24 @@ name : Bonjour
 on:
   push:
     branches:
-      -main
-  pull request:
+      - main
+  pull_request:
     branches:
-      -main
+      - main
   workflow_dispatch:
 
 jobs:
-  hello:
-    runs-on:ubuntu-latest
+  bonjour:
+    runs-on: ubuntu-latest
     steps:
-      -uses:actions/checkout@v2
-      -name:hello monde
-        run:echo "Bonjour"
-        shell:bash
+      - uses: actions/checkout@v2
+      - name: hello monde
+        run: echo "Bonjour"
+        shell: bash
   aurevoir:
-    runs-on:ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      -name: aurevoir
-        run:echo "Au revoir"
-        shell:bash
+      - name: aurevoir
+        run: echo "Au revoir"
+        shell: bash
     
